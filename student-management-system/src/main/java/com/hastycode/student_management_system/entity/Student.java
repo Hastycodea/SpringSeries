@@ -21,4 +21,10 @@ public class Student {
     private String lastName;
     @Column(name = "email")
     private String email;
+
+    public Student(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
 }
