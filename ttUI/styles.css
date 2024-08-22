@@ -1,0 +1,37 @@
+
+
+.bg-cover {
+    background-image: url('assets/coding_background.webp');
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Full height */
+    color: white;
+}
+
+.content {
+    padding: 10px 100px;
+    line-height: 1.8;
+}
+
+.footer-section {
+    background-image: url('assets/89.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh; 
+}
+
+.card {
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    /* padding: 2rem; */
+}
+
+.icons {
+    font-size: 2rem;
+}
+
