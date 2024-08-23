@@ -1,16 +1,18 @@
 
 
 .bg-cover {
-    background-image: url('assets/coding_background.webp');
     background-size: cover;
+    background-image: url('assets/coding_background.webp');
     background-position: center;
     height: 50vh; /* Full height */
     color: white;
 }
 
+
 .content {
-    padding: 10px 100px;
-    line-height: 1.8;
+    padding: 10px 10px;
+    line-height: 2;
+    font-size: 0.9rem;
 }
 
 .footer-section {
@@ -34,4 +36,34 @@
 .icons {
     font-size: 2rem;
 }
-
+body {
+    margin: 0;
+    display: flex;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+.sidebar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    font-size: small;
+}
+.sidebar a:hover {
+    background-color: #dfecf9;
+    color: black;
+}
+/* .content {
+    margin-left: 250px;  /*Offset content by the width of the sidebar*/
+    padding: 15px;
+    flex: 1;
+} */
