@@ -1,12 +1,25 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .bg-cover {
     background-size: cover;
-    background-image: url('assets/coding_background.webp');
+    /* background-image: url('assets/89.jpeg'); */
+    background-image: url('assets/pattern-removebg-preview.png');
+    background-color: #C0392B;
     background-position: center;
     height: 50vh; /* Full height */
-    color: white;
+    color: #C0392B;
 }
+
+.title-border {
+    background-color: white;
+    padding: .4rem;
+    border-radius: 4px;
+}
+
+
 
 
 .content {
@@ -16,7 +29,9 @@
 }
 
 .footer-section {
-    background-image: url('assets/89.jpeg');
+    /* background-image: url('assets/89.jpeg'); */
+    background-image: url('assets/footerbg.png');
+    background-color: #FDFDFD;
     background-size: cover;
     background-position: center;
     height: 50vh; 
@@ -30,15 +45,29 @@
     margin-left: auto;
     margin-right: auto;
     border: none;
+    box-shadow: .4rem;
     /* padding: 2rem; */
 }
 
 .icons {
     font-size: 2rem;
 }
+
+button{
+    border: black;
+}
+
+.side-title {
+    color: #C0392B;
+}
+
+
 body {
     margin: 0;
     display: flex;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    background-color: #FCFCFC;
 }
 .sidebar {
     position: fixed;
