@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hastycode</groupId>
-	<artifactId>UserRegistrationSecurity</artifactId>
+	<artifactId>registration</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>UserRegistrationSecurity</name>
-	<description>Demo project for User Registration + Security</description>
+	<name>registration</name>
+	<description>Demo project for Spring Boot Registration Security</description>
 	<url/>
 	<licenses>
 		<license/>

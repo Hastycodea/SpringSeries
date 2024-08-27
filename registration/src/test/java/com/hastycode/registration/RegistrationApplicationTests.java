@@ -1,10 +1,10 @@
-package com.hastycode.UserRegistrationSecurity;
+package com.hastycode.registration;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UserRegistrationSecurityApplicationTests {
+class RegistrationApplicationTests {
 
 	@Test
 	void contextLoads() {

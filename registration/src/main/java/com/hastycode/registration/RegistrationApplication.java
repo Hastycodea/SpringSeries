@@ -1,13 +1,13 @@
-package com.hastycode.UserRegistrationSecurity;
+package com.hastycode.registration;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserRegistrationSecurityApplication {
+public class RegistrationApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserRegistrationSecurityApplication.class, args);
+		SpringApplication.run(RegistrationApplication.class, args);
 	}
 
 }
