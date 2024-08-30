@@ -26,8 +26,4 @@ public class UserServiceImpl implements UserService{
         return userRepo.save(user);
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return null;
-    }
-}
+ }
