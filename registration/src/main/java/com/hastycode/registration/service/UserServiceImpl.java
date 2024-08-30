@@ -2,6 +2,7 @@ package com.hastycode.registration.service;
 
 import com.hastycode.registration.model.Role;
 import com.hastycode.registration.model.User;
+import com.hastycode.registration.model.UserPrincipal;
 import com.hastycode.registration.repo.UserRepo;
 import com.hastycode.registration.web.dto.UserRegistrationDto;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,4 +27,13 @@ public class UserServiceImpl implements UserService{
         return userRepo.save(user);
     }
 
- }
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepo.findByEmail(username);
+
+        if (user == null) {
+            throw new UsernameNotFoundException("Invalid username or password");
+        }
+        return new UserPrincipal(user);
+    }
+}
