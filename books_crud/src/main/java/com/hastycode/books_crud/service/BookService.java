@@ -13,8 +13,11 @@ import java.util.List;
 @Service
 public class BookService {
 
-    @Autowired
-    private BookRepo repo;
+    private final BookRepo repo;
+
+    public BookService(BookRepo repo) {
+        this.repo = repo;
+    }
 
     public List<Book> getBooks() {
         return repo.findAll();
@@ -24,12 +27,15 @@ public class BookService {
         return repo.save(book);
     }
 
-    public Book updateBook(long id) {
-        Book book = repo.findById(id).get();
+    public void deleteBook(long id) {
+        repo.deleteById(id);
+    }
+
+    public Book updateBook(long id, Book book) {
         return repo.save(book);
     }
 
-    public void deleteBook(long id) {
-        repo.deleteById(id);
+    public Book getBookById(long id) {
+        return repo.findById(id).orElse(null);
     }
 }
