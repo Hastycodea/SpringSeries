@@ -32,4 +32,8 @@ public class HouseService {
     public void deleteHouse(int number) {
         repo.deleteById(number);
     }
+
+    public House getHouseByNumber(int number) {
+        return repo.findById(number).orElse(null);
+    }
 }

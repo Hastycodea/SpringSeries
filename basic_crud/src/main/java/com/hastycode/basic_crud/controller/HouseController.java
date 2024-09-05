@@ -2,7 +2,6 @@ package com.hastycode.basic_crud.controller;
 
 import com.hastycode.basic_crud.model.House;
 import com.hastycode.basic_crud.service.HouseService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,8 +9,11 @@ import java.util.List;
 @RestController
 public class HouseController {
 
-    @Autowired
-    private HouseService service;
+    private final HouseService service;
+
+    public HouseController(HouseService service) {
+        this.service = service;
+    }
 
     @GetMapping("/home")
     public String home() {
@@ -21,6 +23,13 @@ public class HouseController {
     @GetMapping("/houses")
     public List<House> getAllHouses() {
         return service.getAllHouses();
+    }
+
+    @GetMapping("/houses/{number}")
+    public House getHouseByNumber(@PathVariable int number) {
+        House house = null;
+        house = service.getHouseByNumber(number);
+        return house;
     }
 
     @PostMapping("/houses")
@@ -37,7 +46,11 @@ public class HouseController {
 
     @DeleteMapping("/houses/{number}")
     public void deleteHouse(@PathVariable int number) {
-        service.deleteHouse(number);
+        House house = service.getHouseByNumber(number);
+
+        if (house != null) {
+            service.deleteHouse(number);
+        }
     }
 
 }
