@@ -58,7 +58,7 @@ public class BookController {
         newBook = service.updateBook(id, book);
 
         if(newBook != null) {
-            return new ResponseEntity<>(service.updateBook(id, book), HttpStatus.OK);
+            return new ResponseEntity<>(newBook, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
