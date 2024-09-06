@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "users")
+@Table(name = "test_users")
 public class Users {
 
     @Id
     private int id;
-    private String userName;
+    private String username;
     private String password;
 }

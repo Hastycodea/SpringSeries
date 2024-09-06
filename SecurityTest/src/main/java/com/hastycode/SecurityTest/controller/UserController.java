@@ -28,4 +28,5 @@ public class UserController {
     public Users addUser(@RequestBody Users user) {
         return service.addUser(user);
     }
+
 }
