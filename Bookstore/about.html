@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Book Store</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="details d-flex align-items-center justify-content-between">
+            <div class="hours d-flex align-items-center ">
+                <div class="icons">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    <ion-icon name="time" ></ion-icon>
+                </div>
+                <p class="px-2 mt-3">Mon - Fri: 9am - 5pm | Sat 9am - 3pm</p>
+
+
+            </div>
+            <div class="phone d-flex align-items-center">
+
+                <ion-icon name="call" class="px-2"></ion-icon>
+                <p class="mt-3"> +254 113 664459</p>
+
+            </div>
+        </div>
+        <hr class="mt-0">
+
+        <div class="search-icon d-flex align-items-center justify-content-between">
+            <div class="search d-flex">
+                <a href="index.html">
+                    <img src="assets/logo.png" class="logo-image" alt="">
+                  </a>
+                <input class="form-control border-0 border-bottom " placeholder="Product Search"></input>
+                <button class="btn">
+                    <ion-icon name="search" class="icon-image"></ion-icon>
+                </button>
+            </div>
+
+            <div class="cart">
+                <ion-icon name="person" class="icon-image"></ion-icon>
+                <ion-icon name="heart-empty" class="icon-image"></ion-icon>
+                <ion-icon name="basket" class="icon-image"></ion-icon>
+            </div>
+        </div>
+
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex">
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Browse Categories
+                          </a>
+                          <ul class="dropdown-menu scrollable-list" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Fiction</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Non-Fiction</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Biographies & Memoirs</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Academic & Textbooks</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Children's Books</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Self-Help & Personal Development</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Business & Finance</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Science & Technology</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">History & Politics</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Religious & Spiritual</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Health & Wellness</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Travel & Adventure</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Cookbooks & Food</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Art & Photography</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Poetry & Drama</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="navbar-nav  mb-2 mb-lg-0 d-flex justify-content-center align-items-center w-100 ">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">All Books</a>
+                        </li>
+                        <li class="nav-item">
+                          <div class="dropdown">
+                            <a class="btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                              Gift Cards
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <li><a class="dropdown-item" href="#">Buy Gift Card</a></li>
+                              <li><a class="dropdown-item" href="#">Check Gift Card Balance</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Books on Sale</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Event</a>
+                        </li>
+                        
+                        <li>
+                          <div class="dropdown">
+                            <a class="btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                              Info
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <li><a class="dropdown-item" href="#">About Us</a></li>
+                              <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                              <li><a class="dropdown-item" href="#">Delivery Policy</a></li>
+                              <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                          
+                        
+                      </ul>
+                    </div>
+                </div>
+            </nav>
+            <hr class="mt-0">
+
+            <h2>About Us</h2>
+
+            <div class="row mb-5">
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                    <img class="about-img" src="assets/about-us.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                    <p class="p-about ">
+                        Ours is a noble responsibility: that of nourishing the minds of our readers with endless knowledge. For close to 50 years, this has been our chief goal. Here at Prestige Bookshop we do not take it for granted that our customers from all walks of life have journeyed with us for all these years. Jim Carter & Thabo Mbeki are some of the prominent customers that have visited our store.
+
+<br><br> We pride ourselves in having  an unrivaled range of books that are  rare to find in Nairobi or in the region. We are your go-to bookstore whether you are looking for an interesting novel, or a provocative local memoir.
+<br><br>
+Our trademark bookmarks, which are as old as the shop itself, have stood the test of time. When our customers buy their books they are sure to leave with something more: the prestige bookmark.
+                    </p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="footer">
+                <div class="d-flex gap-3">
+                    <a href="">Home</a>
+                    <a href="">Home</a>
+                    <a href="">Home</a>
+                    <a href="">Home</a>
+                    <a href="">Home</a>
+                </div>
+                <p class="footer-text d-flex mt-2">FASAH BOOKS © ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+    
+    
+    
+    
+        
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    </body>
+    </html>
+    

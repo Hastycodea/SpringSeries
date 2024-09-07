@@ -47,3 +47,36 @@
 .footer, .footer-text {
     color: lightseagreen;
 }
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    border: none;
+  }
+
+.dropdown-item:hover {
+    color: cyan;
+    background-color: white;
+}
+
+.p-about {
+    line-height: 2rem;
+    font-size: 1.1rem;
+    /* text-indent: 20px; */
+}
+
+
+.row .about-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+} 
+
+.scrollable-list {
+    max-height: 300px; 
+    overflow-y: auto;
+}
+
+.scrollable-list, li{
+    line-height: 2rem;
+}
