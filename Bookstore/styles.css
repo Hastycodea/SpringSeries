@@ -38,14 +38,33 @@
     padding-bottom: 3rem;
 }
 
+.footer-bottom {
+    background-color: black;
+    height: 10px;
+}
+
 .footer, a {
     list-style: none;
     text-decoration: none;
     color: white;
 }
 
-.footer, .footer-text {
-    color: lightseagreen;
+.footer-text {
+    color: black;
+    background-color: white;
+}
+
+.footer-logo {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.top-footer, .footer-logo {
+    font-size: 1.6rem;
+}
+
+.logo-footer {
+    background-color: yellow;
 }
 
 
