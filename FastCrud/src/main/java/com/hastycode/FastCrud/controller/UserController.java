@@ -33,13 +33,13 @@ public class UserController {
         User user = service.getUserById(id);
 
         if(user != null) {
-            return new ResponseEntity<>(user, HttpStatus.FOUND);
+            return new ResponseEntity<>(user, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
 
-    @PutMapping("/users")
+    @PostMapping("/users")
     public ResponseEntity<User> addUser(@RequestBody User user) {
         if (user != null) {
             return new ResponseEntity<>(service.addUser(user), HttpStatus.OK) ;
@@ -48,14 +48,15 @@ public class UserController {
         }
     }
 
-    @PostMapping("/users/{id}")
+    @PutMapping("/users/{id}")
     public ResponseEntity<User> updateUser(@PathVariable int id, @RequestBody User user) {
-        User prevUser = service.getUserById(id);
+        User newUser = null;
+        newUser = service.updateUser(user);
 
-        if (prevUser != null) {
-            return new ResponseEntity<>(service.updateUser(user), HttpStatus.OK) ;
+        if (newUser != null) {
+            return new ResponseEntity<>(newUser, HttpStatus.OK) ;
         } else {
-            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
 
@@ -67,7 +68,7 @@ public class UserController {
             service.deleteUser(id);
             return new ResponseEntity<>("User Deleted", HttpStatus.OK);
         } else {
-            return new ResponseEntity<>("User not found!", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("User not found!", HttpStatus.NOT_FOUND);
         }
     }
 
