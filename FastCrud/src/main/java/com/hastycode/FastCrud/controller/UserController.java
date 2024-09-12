@@ -2,6 +2,8 @@ package com.hastycode.FastCrud.controller;
 
 import com.hastycode.FastCrud.model.User;
 import com.hastycode.FastCrud.service.UserService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,30 +24,51 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public List<User> allUsers() {
-        return service.allUsers();
+    public ResponseEntity <List<User>> allUsers() {
+        return new ResponseEntity<>(service.allUsers(), HttpStatus.OK) ;
     }
 
     @GetMapping("/users/{id}")
-    public User getUserById(@PathVariable int id) {
-        return service.getUserById(id);
+    public ResponseEntity<User> getUserById(@PathVariable int id) {
+        User user = service.getUserById(id);
+
+        if(user != null) {
+            return new ResponseEntity<>(user, HttpStatus.FOUND);
+        } else {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
     }
 
     @PutMapping("/users")
-    public User addUser(@RequestBody User user) {
-        return service.addUser(user);
+    public ResponseEntity<User> addUser(@RequestBody User user) {
+        if (user != null) {
+            return new ResponseEntity<>(service.addUser(user), HttpStatus.OK) ;
+        } else {
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
     }
 
     @PostMapping("/users/{id}")
-    public User updateUser(@PathVariable int id, @RequestBody User user) {
+    public ResponseEntity<User> updateUser(@PathVariable int id, @RequestBody User user) {
         User prevUser = service.getUserById(id);
 
-        return service.updateUser(user);
+        if (prevUser != null) {
+            return new ResponseEntity<>(service.updateUser(user), HttpStatus.OK) ;
+        } else {
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
     }
 
     @DeleteMapping("/users/{id}")
-    public void deleteUser(@PathVariable int id) {
-        service.deleteUser(id);
+    public ResponseEntity<String> deleteUser(@PathVariable int id) {
+        User user = service.getUserById(id);
+
+        if(user != null) {
+            service.deleteUser(id);
+            return new ResponseEntity<>("User Deleted", HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>("User not found!", HttpStatus.BAD_REQUEST);
+        }
     }
 
 
