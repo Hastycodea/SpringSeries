@@ -2,8 +2,6 @@ package com.hastycode.RecapCRUD.controller;
 
 import com.hastycode.RecapCRUD.model.Worker;
 import com.hastycode.RecapCRUD.service.WorkerService;
-import org.apache.coyote.Response;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -49,7 +47,7 @@ public class WorkerController {
     @PutMapping("/workers/{id}")
     public ResponseEntity<Worker> updateWorker(@PathVariable int id, @RequestBody Worker worker) {
         Worker newWorker = null;
-        newWorker = service.updateWorker(worker);
+        newWorker = service.updateWorker(worker, id);
 
         if(newWorker != null) {
             return  new ResponseEntity<>(newWorker, HttpStatus.OK);

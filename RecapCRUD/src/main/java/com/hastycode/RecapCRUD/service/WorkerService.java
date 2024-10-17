@@ -29,8 +29,14 @@ public class WorkerService {
         return repo.save(worker);
     }
 
-    public Worker updateWorker(Worker worker) {
-        return repo.save(worker);
+    public Worker updateWorker(Worker worker, int id) {
+        Worker updatedWorker = repo.findById(id).orElse(null);
+
+        if(updatedWorker != null) {
+            return repo.save(worker);
+        } else {
+            return null;
+        }
     }
 
     public void deleteWorker(int id) {
