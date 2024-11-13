@@ -65,13 +65,18 @@ const Home = () => {
           </form>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-            {nonFiction.map((dog) => {
-              <article key={dog.rank} className="bg-slate-700 p-4 rounded">
-                {/* <img src={dog.image.url} alt={dog.name} className="rounded" /> */}
-                <h3>{dog.title}</h3>
-                <p>Bred for: {dog.description}</p>
-              </article>;
-            })}
+            {nonFiction.slice(0, 12).map((book) => (
+              // eslint-disable-next-line react/jsx-key
+              <div className="flex flex-col group relative">
+                <img
+                  src={book.book_image}
+                  alt=""
+                  className="h-[280px] w-[100%] object-contain hover:scale-95 duration-300 ease-out"
+                />
+                <p className="text-sm text-gray-500">{book.title}</p>
+                <p className="text-sm text-gray-500">{book.price}</p>
+              </div>
+            ))}
           </div>
         </section>
       )}
