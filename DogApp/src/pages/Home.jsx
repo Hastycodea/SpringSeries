@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [dogs, setDogs] = useState([]);
@@ -64,18 +65,38 @@ const Home = () => {
             />
           </form>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-            {nonFiction.slice(0, 12).map((book) => (
+          {/* <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 my-10 rounded">
+            {nonFiction.map((book) => (
               // eslint-disable-next-line react/jsx-key
-              <div className="flex flex-col group relative">
-                <img
-                  src={book.book_image}
-                  alt=""
-                  className="h-[280px] w-[100%] object-contain hover:scale-95 duration-300 ease-out"
-                />
-                <p className="text-sm text-gray-500">{book.title}</p>
-                <p className="text-sm text-gray-500">{book.price}</p>
-              </div>
+              <Link to={`${book.title}`} key={book.rank} className="bg-slate-500 hover:bg-slate-200 transition-all duration-200">
+                <article >
+                  <img
+                    src={book.book_image}
+                    alt={book.title}
+                    className="rounded mx-auto md:h-70 w-full object-cover mx-auto"
+                    loading="lazy"
+                  />
+                  <h3 className="font-bold text-white mt-3 ">{book.title}</h3>
+                  <p className="text-slate-300">{book.price}</p>
+                </article>
+              </Link>
+            ))}
+          </div> */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 my-10 rounded">
+            {dogs.map((dog) => (
+              // eslint-disable-next-line react/jsx-key
+              <Link to={`${dog.title}`} key={dog.rank} className="bg-slate-500 hover:bg-slate-200 transition-all duration-200">
+                <article >
+                  <img
+                    src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}
+                    alt={dog.name}
+                    className="rounded md:h-70 w-full object-cover "
+                    loading="lazy"
+                  />
+                  <h3 className="font-bold text-white mt-3 ">{dog.name}</h3>
+                  <p className="text-slate-300">{dog.bred_for}</p>
+                </article>
+              </Link>
             ))}
           </div>
         </section>
