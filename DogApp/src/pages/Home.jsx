@@ -85,7 +85,7 @@ const Home = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 my-10 rounded">
             {dogs.map((dog) => (
               // eslint-disable-next-line react/jsx-key
-              <Link to={`${dog.name}`} key={dog.rank} className="bg-slate-500 hover:bg-slate-400 transition-all duration-200">
+              <Link to={`${dog.name}`} key={dog.rank} className="bg-slate-600 hover:bg-slate-400 transition-all duration-200">
                 <article >
                   <img
                     src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}
