@@ -85,12 +85,12 @@ const Home = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 my-10 rounded">
             {dogs.map((dog) => (
               // eslint-disable-next-line react/jsx-key
-              <Link to={`${dog.title}`} key={dog.rank} className="bg-slate-500 hover:bg-slate-200 transition-all duration-200">
+              <Link to={`${dog.name}`} key={dog.rank} className="bg-slate-500 hover:bg-slate-400 transition-all duration-200">
                 <article >
                   <img
                     src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}
                     alt={dog.name}
-                    className="rounded md:h-70 w-full object-cover "
+                    className="rounded md:h-56 w-full object-cover "
                     loading="lazy"
                   />
                   <h3 className="font-bold text-white mt-3 ">{dog.name}</h3>
