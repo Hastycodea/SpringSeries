@@ -24,7 +24,7 @@ const SingleDog = () => {
 
   return (
     <div>
-      <section className="max-w-5xl mx-auto flex items-center justify-center  ">
+      <section className="max-w-5xl mx-auto flex items-center justify-center h-screen  ">
         {dog.map((item) => (
           <div key={item.id} className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:place-items-center">
             <article>
