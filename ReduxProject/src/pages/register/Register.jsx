@@ -5,7 +5,7 @@ import Navbar from "../../components/navbar/Navbar";
 const Register = () => {
   return (
     <div>
-        <Navbar />
+      <Navbar />
       <div className="register-container">
         <div className="regiter-wrapper">
           <form action="">

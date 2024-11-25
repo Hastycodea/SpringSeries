@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { allProducts } from "../../data";
 import Navbar from "../../components/navbar/Navbar";
@@ -9,7 +9,18 @@ const SingleProduct = () => {
   const product = allProducts.find((product) => product.id === parseInt(id));
 
   const colors = ["red", "purple", "green", "teal", "black"];
+  const [selectedColor, setSelectedColor] = useState(null);
+
+  const handleColorClick = (color) => {
+    setSelectedColor(color);
+  };
+
   const sizes = ["xs", "sm", "m", "l", "xl"];
+  const [selectedSize, setSelectedSize] = useState(null);
+
+  const handleSizeClick = (size) => {
+    setSelectedSize(size);
+  };
 
   return (
     <div className="singleProduct-container">
@@ -29,22 +40,37 @@ const SingleProduct = () => {
             incidunt excepturi harum dolorem deleniti.
           </p>
           <div className="singleProduct-options">
-            <h4>Colors</h4>
-            <div className="colors">
-              {colors.map((color) => (
-                <div
-                  className="color-circle"
-                  key={color}
-                  style={{ backgroundColor: color }}
-                ></div>
-              ))}
+            <div className="colors-section">
+              <h4>Colors</h4>
+              <div className="colors">
+                {colors.map((color) => (
+                  <div
+                    className="color-circle"
+                    key={color}
+                    style={{
+                      backgroundColor: color,
+                      outline:
+                        selectedColor === color ? `3px solid ${color}` : "",
+                    }}
+                    onClick={() => handleColorClick(color)}
+                  ></div>
+                ))}
+              </div>
             </div>
 
             <div className="sizes-section">
               <h4>Size</h4>
               <div className="sizes">
                 {sizes.map((size) => (
-                  <span key={size}>{size}</span>
+                  <span
+                    key={size}
+                    style={{
+                      border: selectedSize === size ? "1px solid #ccc" : "",
+                    }}
+                    onClick={() => handleSizeClick(size)}
+                  >
+                    {size}
+                  </span>
                 ))}
               </div>
             </div>
