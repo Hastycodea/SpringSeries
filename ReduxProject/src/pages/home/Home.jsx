@@ -1,15 +1,21 @@
-import Announcement from '../../components/announcement/Announcement'
-import Navbar from '../../components/navbar/Navbar'
-import Slider from '../../components/slider/Slider'
+import Announcement from "../../components/announcement/Announcement";
+import Categories from "../../components/categories/Categories";
+import Navbar from "../../components/navbar/Navbar";
+import BestSellers from "../../components/products/BestSellers";
+import NewArrivals from "../../components/products/NewArrivals";
+import Slider from "../../components/slider/Slider";
 
 const Home = () => {
   return (
     <div>
-        <Announcement />
-        <Navbar />
-        <Slider />
+      <Announcement />
+      <Navbar />
+      <Slider />
+      <Categories />
+      <NewArrivals />
+      <BestSellers />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
