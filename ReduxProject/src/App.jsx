@@ -1,12 +1,18 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+
+
+// Store
+
+CounterState {
+  value:number;
+}
 
 function App() {
   return (
     <>
-      <Navbar />
     </>
   );
 }
+
 
 export default App;
