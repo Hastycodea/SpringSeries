@@ -14,7 +14,6 @@ const SingleProduct = () => {
     dispatch(addToCart(product))
   }
 
-
   const { id } = useParams();
   const product = allProducts.find((product) => product.id === parseInt(id));
 
