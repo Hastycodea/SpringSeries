@@ -3,8 +3,18 @@ import { useParams } from "react-router-dom";
 import { allProducts } from "../../data";
 import Navbar from "../../components/navbar/Navbar";
 import "./SingleProduct.css";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartSlice";
 
 const SingleProduct = () => {
+
+  const dispatch = useDispatch()
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+  }
+
+
   const { id } = useParams();
   const product = allProducts.find((product) => product.id === parseInt(id));
 
@@ -74,6 +84,9 @@ const SingleProduct = () => {
                 ))}
               </div>
             </div>
+          </div>
+          <div className="addToCart" onClick={() => handleAddToCart(product)}>
+            <button>Add to Cart</button>
           </div>
         </div>
       </div>
