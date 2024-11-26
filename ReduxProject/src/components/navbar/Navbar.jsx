@@ -32,10 +32,15 @@ const Navbar = () => {
             <div className="navbar-menuItem">Register</div>
           </Link>
           <div className="navbar-menuItem">Login</div>
-          <div className="navbar-menuItem">
-            <MdOutlineShoppingCart className="icon" />
-            {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
-          </div>
+
+          <Link to="/cart">
+            <div className="navbar-menuItem">
+              <MdOutlineShoppingCart className="icon" />
+              {totalItems > 0 && (
+                <span className="cart-badge">{totalItems}</span>
+              )}
+            </div>
+          </Link>
         </div>
       </div>
     </nav>
