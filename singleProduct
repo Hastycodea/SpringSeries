@@ -1,0 +1,521 @@
+[33mcommit 1ec42c723095385eae7f4e3ac8f0e8346e150c51[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Nov 26 16:07:43 2024 +0300
+
+    addToCartItems
+
+[33mcommit b8c10a1eec8e36c2a5a4172ec8fe8f8a9c3f51be[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Nov 25 20:37:35 2024 +0300
+
+    selection
+
+[33mcommit 54e126bf0b9e3b42b6b7067ab7d508d5bc258ee2[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Nov 25 19:31:55 2024 +0300
+
+    singleProduct
+
+[33mcommit d8e6787c2e1385496264dcf9b9b4a46a2e1041e3[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Nov 25 15:57:45 2024 +0300
+
+    LinksUpdated
+
+[33mcommit d5997c02f521789a7d940b675b3facefc7180f7f[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Nov 25 13:09:44 2024 +0300
+
+    SliderAdded
+
+[33mcommit 99d809f10c118b665125f0d7f39a3fc5ff6eaee4[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Nov 25 11:26:03 2024 +0300
+
+    projerojectRedux
+
+[33mcommit 713a5a49dea8ebbcd0b97cb08c399be8bdfa602e[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Nov 25 09:23:31 2024 +0300
+
+    ReduxChase
+
+[33mcommit 3d9b10b0e200d0d4f7209cf112217bdba9b26d33[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sat Nov 23 20:31:01 2024 +0300
+
+    ReduxTutorial
+
+[33mcommit c685fef04e8a9ab7854edf2d167838bf0dd9e070[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Nov 15 13:21:33 2024 +0300
+
+    searchFunctionality
+
+[33mcommit 282737a0afe261f32e6ddb0518e895810b7be3f4[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Nov 14 22:17:19 2024 +0300
+
+    singleDog
+
+[33mcommit 8bc730c0d16dc46661df50a530708e8cd70d517f[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Nov 14 22:11:03 2024 +0300
+
+    SingleDogPage
+
+[33mcommit 0c06e44ac107924f4d1c8dbc39027d7133458ca4[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Nov 14 18:31:49 2024 +0300
+
+    useParams
+
+[33mcommit a6f628824e7f60fda77b33dc6516b9c565f96716[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Wed Nov 13 15:32:57 2024 +0300
+
+    dogsAdded
+
+[33mcommit e7d8b3518229c7694480bc83f95c0e1a6b9a6652[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Wed Nov 13 11:19:31 2024 +0300
+
+    update
+
+[33mcommit 3ae0002dab05efc7dcc401549bf5a6a41713cecb[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Nov 12 21:29:15 2024 +0300
+
+    indexUpdated
+
+[33mcommit 5566b7cefeb1bfb251929d82df7d1d467125f8b2[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Nov 12 18:16:24 2024 +0300
+
+    api
+
+[33mcommit f28d026fbe3e2a1a5e2837e396c7343f45b2aba0[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Nov 12 16:22:55 2024 +0300
+
+    pages
+
+[33mcommit cbca6432f670d09a8440ddb2ebea3228ed147edb[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Nov 12 14:38:03 2024 +0300
+
+    DogApp
+
+[33mcommit c252cee86815454c163e28149b7f35d24e719679[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Wed Oct 30 16:05:11 2024 +0300
+
+    about+contact
+
+[33mcommit 03c638b6673e3fea1aab3022c6c824d651641056[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Oct 17 14:59:39 2024 +0300
+
+    updated Update
+
+[33mcommit 4a4694e711e9fd64aac91807b889f54748f35da0[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Sep 30 16:34:06 2024 +0300
+
+    recapCRUD
+
+[33mcommit 3a963790c98b8f71abe3d9badf2e3f65a8050b6b[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sat Sep 21 21:13:45 2024 +0300
+
+    hello
+
+[33mcommit c74e625db3175b707e1a2646cd6097b6ef8f953b[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sun Sep 15 07:39:38 2024 +0300
+
+    cart
+
+[33mcommit 47fc34d18e7de521a8c5d864f5e658c663730b40[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sat Sep 14 08:57:55 2024 +0300
+
+    cartUpdates
+
+[33mcommit aae3ffefcedd8f3a8fc78648c86a7f6449fa677b[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sat Sep 14 07:17:37 2024 +0300
+
+    cart
+
+[33mcommit 3b22760b40e375a3ee6be1e9274cbadfa7382c8b[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Sep 13 12:49:47 2024 +0300
+
+    BootStrap Project
+
+[33mcommit a28bd8e73da10950c59fd524ee5b6f6cea42e0d5[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Sep 12 18:53:49 2024 +0300
+
+    updated HttpStatus
+
+[33mcommit 5134d20c48838f82f222a31fe7ae606444dcab4e[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Sep 12 18:35:52 2024 +0300
+
+    updated Response Entity
+
+[33mcommit a300edd2a9c734929cd231c6ab7ed60b8bbe09ad[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Sep 12 16:09:02 2024 +0300
+
+    waitingResponseEntity
+
+[33mcommit 227e260180e9f607f90e222c9d2d128c5ba6bdf7[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Sep 12 15:28:39 2024 +0300
+
+    fastCRUD
+
+[33mcommit 7b06f1322651a8ab1c83e9611e4ea30924314dd3[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sun Sep 8 07:19:39 2024 +0300
+
+    updated footer
+
+[33mcommit 018d18a78af068be1b7cb9dae562919dde3f8c11[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sat Sep 7 09:59:39 2024 +0300
+
+    stylesUpdated
+
+[33mcommit fc21e74d0901bf9c1d863ff5e09c0048cb7d975c[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sat Sep 7 09:58:50 2024 +0300
+
+    updatedAboutUs&& categories
+
+[33mcommit f43e2c5e408eb1213aa173151e04f1c2cc82e965[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sat Sep 7 07:38:08 2024 +0300
+
+    xs screen
+
+[33mcommit 528bb7e3199d9582eee0cdc344d07809160e8c3c[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sat Sep 7 07:30:40 2024 +0300
+
+    updated UI
+
+[33mcommit 09b03e6599bed762d4536a1dca92a20f3693cd32[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Sep 6 16:54:29 2024 +0300
+
+    updated Sec
+
+[33mcommit f47c9baa0a118f8696927e5782ff5fcc7ee8e2c1[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Sep 6 14:59:57 2024 +0300
+
+    secConfig
+
+[33mcommit 670b5b5446b75bcfde588f6bc994c8d253a93478[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Sep 6 08:05:25 2024 +0300
+
+    securityTest
+
+[33mcommit 4cfc5a16997b64d190893181f0968c23297bbb92[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Sep 6 06:36:10 2024 +0300
+
+    SecurityConfig review
+
+[33mcommit 3070ce5a8be40f9fb8c610fc6ffca52547d035cd[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Sep 5 10:00:13 2024 +0300
+
+    basicCRUD updated
+
+[33mcommit 15138c812b6ffe54deba955656dcc591b0b999d3[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Sep 5 09:59:22 2024 +0300
+
+    booksUpdate
+
+[33mcommit 4c281ad61bc5ac3eb910612b71ac6bf99c5ef738[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Wed Sep 4 18:20:58 2024 +0300
+
+    crud
+
+[33mcommit f0081e1ec71e144047e0d3f981bb68d26a56919c[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Wed Sep 4 16:46:25 2024 +0300
+
+    basicCRUD
+
+[33mcommit b850af17b761fcf4691dd9535c95e86f30dcc52a[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Sep 2 10:12:48 2024 +0300
+
+    UI updated
+
+[33mcommit 959994a64ccc593a7257489bb3e0af4e7069207b[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Sep 2 07:24:22 2024 +0300
+
+    CoronaTracker
+
+[33mcommit a9aaab911ad047c0da8f76f9d7fa647cf322517a[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sun Sep 1 08:54:20 2024 +0300
+
+    ResponseEntity
+
+[33mcommit ece618f8186e8282dd67fd5160307e990bfb691a[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sun Sep 1 07:29:31 2024 +0300
+
+    crud
+
+[33mcommit 9f94b584c25d636c8be44a8da1c4a7cfb0a39d2f[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sun Sep 1 06:26:06 2024 +0300
+
+    crudOps
+
+[33mcommit a81afa2d7c8cb4669651f492ccfdf96671740180[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sat Aug 31 18:51:49 2024 +0300
+
+    fasah
+
+[33mcommit fd7d220f5f673485f4bc2d34d3a89eb39f951a83[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sat Aug 31 08:52:33 2024 +0300
+
+    fasahBooks
+
+[33mcommit c1fcf06f60c92de07a6af5836d9bc2a1225c9cb6[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Aug 30 18:45:28 2024 +0300
+
+    footer&logo
+
+[33mcommit 79f6f2e01eb6c527bbc220234545fdd911c2cafd[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Aug 30 13:00:49 2024 +0300
+
+    UserPrincipal
+
+[33mcommit 7ff26de5afa1ad4748b4c38b592165acefca5f2d[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Aug 30 08:37:17 2024 +0300
+
+    updatedPost
+
+[33mcommit 08ebc426726cbb9976ab8ddc14adb7416fb8bf2c[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Aug 30 07:50:33 2024 +0300
+
+    postInProgress
+
+[33mcommit 5bf18bfcee2f90867c556035855c2eeb0ad73890[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Aug 29 19:53:51 2024 +0300
+
+    registration
+
+[33mcommit ae7f9048e4aad971b309616b145f6cbe71e4775c[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Aug 29 16:50:53 2024 +0300
+
+    dto
+
+[33mcommit f57b39d84a2d6b18acf94d198dd803f6fe6f566e[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Aug 29 13:02:57 2024 +0300
+
+    Daraja
+
+[33mcommit c1bb47533addd9c8aaa39410eb132afb43d69747[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Aug 29 08:59:53 2024 +0300
+
+    cards
+
+[33mcommit 74e298bac1bad04845272b63c9362f065fed6293[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Aug 29 08:24:04 2024 +0300
+
+    cardsUpdated
+
+[33mcommit fb6be7a0fc67942c28ca466e6a73d68f06b0facb[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Wed Aug 28 19:24:25 2024 +0300
+
+    bookstore
+
+[33mcommit 8194c6c6e9fa900463b1b6c531888941a9813f14[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Wed Aug 28 08:25:31 2024 +0300
+
+    applicationP
+
+[33mcommit bd0d4fb8d290f20a43eae7751bac88aacf98199d[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Wed Aug 28 07:01:20 2024 +0300
+
+    updatedModels
+
+[33mcommit 0b9ae69e514f16d7463ff7676b320cb6858e364d[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Wed Aug 28 06:25:17 2024 +0300
+
+    prop
+
+[33mcommit 78190c8e8909146590e7942688b434ac8d73d8ee[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Aug 27 20:13:28 2024 +0300
+
+    test
+
+[33mcommit 198f1533d058a38a8a8557b57380f519ba193f71[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Aug 27 18:10:50 2024 +0300
+
+    regist
+
+[33mcommit 21834f8fa176bb678130eb51a1b6aec8f7c03a30[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Aug 27 18:05:43 2024 +0300
+
+    registration
+
+[33mcommit 04625f5b1b9a49f722d713cb4f3f0715cba08697[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Aug 27 17:12:29 2024 +0300
+
+    RegistrationSecurity
+
+[33mcommit 266d7aa4dbce54de10598620ebc595f00437b127[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Aug 27 07:18:46 2024 +0300
+
+    BcryptPasswordEncoder
+
+[33mcommit 632e7dece630ce6c3a8d1c49eaa2e4b6f26e0623[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Aug 26 13:35:36 2024 +0300
+
+    touchups
+
+[33mcommit 226a2604d330f71fed94de856ccd87d22199ec5c[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Aug 26 10:12:45 2024 +0300
+
+    User from Db
+
+[33mcommit 9d185c40dee76dfd9ef8286a24caeb6486f4dd28[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Aug 26 08:41:27 2024 +0300
+
+    security configuration
+
+[33mcommit bcb8734a1554de486d84a291864734d964994d4b[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Aug 26 07:03:27 2024 +0300
+
+    updated Username and Password
+
+[33mcommit c60cdfebc294921176a0e1a1953b6cb8cbe979c4[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Aug 26 06:42:13 2024 +0300
+
+    seeting Security
+
+[33mcommit efa2507f0a355bc8a2230290e27bfdbe99b26aa6[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sun Aug 25 15:35:59 2024 +0300
+
+    loginUpdated
+
+[33mcommit 444e81853dee52265129d42067642caf26f88b93[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Aug 23 13:14:23 2024 +0300
+
+    updated bg img, color
+
+[33mcommit b58fa60a3a5436c27c8407255a09d4c70c0d0ed8[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Fri Aug 23 10:02:13 2024 +0300
+
+    ModifiedUI
+
+[33mcommit b191386ea5df8debbbba389871e6016e4e0c2867[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Aug 22 20:47:01 2024 +0300
+
+    updatedTotoTech
+
+[33mcommit f1fa30100181c0032ee541af56379b1ae8ca96e8[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Thu Aug 22 16:16:15 2024 +0300
+
+    ttUI
+
+[33mcommit eccb473735c98e15d7dc9df54e00707c0870f111[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Wed Aug 21 12:36:20 2024 +0300
+
+    updated delete
+
+[33mcommit 2245587c139c995d5ca464a0f92ba0b7c13e7f71[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Wed Aug 21 10:28:11 2024 +0300
+
+    updated adding Student, update
+
+[33mcommit fe09b40cd41241cb86b7614b30fd4661e8dcfc8b[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Aug 20 20:26:56 2024 +0300
+
+    updatedsms
+
+[33mcommit 69066fd66efb396e1adfed68a12eef94a8df008f[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Aug 20 16:08:22 2024 +0300
+
+    sms
+
+[33mcommit 022aeec0e2ad6a90123913216e7d0e2b2a99e371[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Aug 20 14:16:02 2024 +0300
+
+    thymeUpdate
+
+[33mcommit 1e4a40ac68f58dff8471121606e1035147dab551[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Tue Aug 20 09:35:17 2024 +0300
+
+    Daraja Series
+
+[33mcommit c57d9830f8e6036c2340d3f35e3820cec146eda9[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Mon Aug 19 07:44:32 2024 +0300
+
+    updatedLogin
+
+[33mcommit 4bfdc7dbfb1bee575598300fc679e138e58b97cf[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sun Aug 18 22:04:06 2024 +0300
+
+    loginUpdate
+
+[33mcommit 7eb89d60750a4be8dd0b07c5bfc9bfe839cbf337[m
+Author: Hastycode Andreh <hastycodeandreh@gmail.com>
+Date:   Sun Aug 18 19:36:38 2024 +0300
+
+    series101
