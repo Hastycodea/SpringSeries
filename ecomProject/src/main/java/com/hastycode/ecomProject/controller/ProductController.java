@@ -34,11 +34,13 @@ public class ProductController {
         Product product = service.getProductById(id);
 
         if(product != null) {
-            return  new ResponseEntity<>(product, HttpStatus.FOUND);
+//            solved 302 error
+            return  new ResponseEntity<>(product, HttpStatus.OK);
         } else {
             return  new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
+
     @PostMapping("/product")
     public  ResponseEntity<Product> addProduct(@RequestBody Product product) {
         Product product1 = service.addProduct(product);
