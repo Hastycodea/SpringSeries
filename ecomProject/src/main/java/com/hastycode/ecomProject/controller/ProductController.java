@@ -39,4 +39,13 @@ public class ProductController {
             return  new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
+    @PostMapping("/product")
+    public  ResponseEntity<Product> addProduct(@RequestBody Product product) {
+        Product product1 = service.addProduct(product);
+
+        if(product1 != null) {
+            return new ResponseEntity<>(product1, HttpStatus.CREATED);
+        }
+        return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+    }
 }
