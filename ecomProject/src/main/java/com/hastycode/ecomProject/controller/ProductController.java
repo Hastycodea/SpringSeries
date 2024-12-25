@@ -33,12 +33,8 @@ public class ProductController {
     public ResponseEntity<Product> getProductById(@PathVariable int id) {
         Product product = service.getProductById(id);
 
-        if(product != null) {
-//            solved 302 error
-            return  new ResponseEntity<>(product, HttpStatus.OK);
-        } else {
-            return  new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-        }
+//      solved 302 error
+        return product != null ? new ResponseEntity<>(product, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @PostMapping("/product")
