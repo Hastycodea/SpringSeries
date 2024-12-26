@@ -5,6 +5,7 @@ import com.hastycode.ecomProject.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -37,13 +38,25 @@ public class ProductController {
         return product != null ? new ResponseEntity<>(product, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping("/product")
-    public  ResponseEntity<Product> addProduct(@RequestBody Product product) {
-        Product product1 = service.addProduct(product);
+//    @PostMapping("/product")
+//    public  ResponseEntity<Product> addProduct(@RequestBody Product product) {
+//        Product product1 = service.addProduct(product);
+//
+////        if(product != null) {
+//        if(product1 != null) {
+//            return new ResponseEntity<>(product1, HttpStatus.CREATED);
+//        }
+//        return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+//    }
 
-        if(product1 != null) {
+    @PostMapping("/product")
+    public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart MultipartFile imageFile) {
+        try{
+            Product product1 = service.addProduct(product, imageFile);
             return new ResponseEntity<>(product1, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return  new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
     }
+
 }
