@@ -12,7 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "productz")
+@Table(name = "productzzz")
 public class Product {
 
     @Id
@@ -27,7 +27,7 @@ public class Product {
 //    the mm needs to be capital in date format
 //    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date releaseDate;
-    private boolean available;
+    private boolean productAvailable;
     private int quantity;
 
     private String imageName;
@@ -35,6 +35,14 @@ public class Product {
 
     @Lob
     private byte[] imageData;
+
+    public boolean isProductAvailable() {
+        return productAvailable;
+    }
+
+    public void setProductAvailable(boolean productAvailable) {
+        this.productAvailable = productAvailable;
+    }
 
     public String getImageName() {
         return imageName;
@@ -88,9 +96,7 @@ public class Product {
         return releaseDate;
     }
 
-    public boolean isAvailable() {
-        return available;
-    }
+
 
     public int getQuantity() {
         return quantity;
@@ -124,9 +130,6 @@ public class Product {
         this.releaseDate = releaseDate;
     }
 
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
