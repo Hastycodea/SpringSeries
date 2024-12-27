@@ -14,11 +14,15 @@ const Memories = () => {
   }, []);
 
   return (
-    <div>
-      {memories.map(({workerId, firstName, lastName}) => (
-        <div key={workerId} className="flex gap-5">
-          <p><span className="font-bold">First Name:</span>{firstName}</p>
-          <p><span className="font-bold">Last Name:</span>{lastName}</p>
+    <div className="grid grid-cols-4 gap-3 mt-3">
+      {memories.map(({ workerId, firstName, lastName }) => (
+        <div key={workerId} className="">
+          <img src="mem.jpg" className="w-[400px]" alt="" />
+          <div className="flex gap-3">
+            <p>
+              {firstName} {lastName}
+            </p>
+          </div>
         </div>
       ))}
     </div>
