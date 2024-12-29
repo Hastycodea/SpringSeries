@@ -8,6 +8,10 @@ const Navbar = () => {
         <Link to="/">
           <h4>Side Quest</h4>
         </Link>
+        <a href="/add_memory">
+          <h4>Add Memory</h4>
+        </a>
+
       </div>
     </div>
   );
