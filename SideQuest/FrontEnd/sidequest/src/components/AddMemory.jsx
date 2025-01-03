@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 const AddMemory = () => {
   const [worker, setWorker] = useState({ firstName: "", lastName: "" });
+  const [image, setImage] = useState(null);
 
   //handle inputchange for firstName and lastName
   const handleInputChange = (e) => {
@@ -13,16 +14,33 @@ const AddMemory = () => {
   //handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append("imageFile", image);
+    formData.append(
+      "worker",
+      new Blob([JSON.stringify(worker)], { type: "application/json" })
+    );
 
-    try {
-      const res = await axios.post("http://localhost:8080/workers", worker);
-      console.log("Worker added", res.data);
-      alert("Worker successfully added");
-      setWorker({ firstName: "", lastName: "" }); //Reset form
-    } catch (error) {
-      console.log("Error adding worker", error);
-      alert("Failed to add Worker");
-    }
+    axios
+      .post("http://localhost:8080/workers", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((res) => {
+        console.log("Worker added", res.data);
+        alert("Worker successfully added");
+        setWorker({ firstName: "", lastName: "" });
+      })
+      .catch((error) => {
+        //Clearing the input field after submission
+        console.log("Error adding worker", error);
+        alert("Failed to add Worker");
+      });
+  };
+
+  const handleImageChange = (e) => {
+    setImage(e.target.files[0]);
   };
 
   return (
@@ -48,6 +66,12 @@ const AddMemory = () => {
           value={worker.lastName}
           onChange={handleInputChange}
           placeholder="Enter last name"
+          className="p-[10px] bg-gray-200 rounded-md outline-none mb-4"
+          required
+        />
+        <input
+          type="file"
+          onChange={handleImageChange}
           className="p-[10px] bg-gray-200 rounded-md outline-none mb-4"
           required
         />

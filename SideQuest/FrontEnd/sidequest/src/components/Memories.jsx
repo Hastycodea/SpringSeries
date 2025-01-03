@@ -13,9 +13,13 @@ const Memories = () => {
 
   useEffect(() => {
     const fetchMemories = async () => {
-      const res = await axios.get("http://localhost:8080/workers");
-      setMemories(res.data);
-      console.log(res.data);
+      try {
+        const res = await axios.get("http://localhost:8080/workers");
+        setMemories(res.data);
+        console.log(res.data);
+      } catch (error) {
+        console.log("Error fetching workers", error);
+      }
     };
     fetchMemories();
   }, []);
@@ -24,7 +28,14 @@ const Memories = () => {
     <div className="grid grid-cols-4 gap-3 mt-3">
       {memories.map(({ workerId, firstName, lastName }) => (
         <div key={workerId} className="">
-          <img src="mem.jpg" className="w-[400px]" alt="" onClick={() => {handleViewMemory(workerId)}}/>
+          <img
+            src={`http://localhost:8080/worker/${workerId}/image`}
+            className="w-[300px] h-[200px] object-scale-down shadow-md"
+            alt={firstName}
+            onClick={() => {
+              handleViewMemory(workerId);
+            }}
+          />
           <div className="flex gap-3">
             <p className="text-center w-[100%]">
               {firstName} {lastName}

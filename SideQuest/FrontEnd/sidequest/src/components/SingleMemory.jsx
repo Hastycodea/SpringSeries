@@ -33,7 +33,7 @@ const SingleMemory = () => {
 
   return (
     <div className="mt-3 flex flex-col items-center justify-center">
-      <img src="/mem.jpg" className="w-[400px]" alt="" />
+      <img src={`http://localhost:8080/worker/${id}/image`} className="w-[400px]" alt="" />
       <div key={memory.memoryId}>
         <p>
           {memory.firstName} {memory.lastName}
