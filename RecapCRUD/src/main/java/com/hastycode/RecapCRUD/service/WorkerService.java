@@ -31,21 +31,28 @@ public class WorkerService {
 //        return repo.save(worker);
 //    }
 
-    public Worker updateWorker(Worker worker, int id) {
-        Worker updatedWorker = repo.findById(id).orElse(null);
-
-        if(updatedWorker != null) {
-            return repo.save(worker);
-        } else {
-            return null;
-        }
-    }
+//    public Worker updateWorker(Worker worker, int id) {
+//        Worker updatedWorker = repo.findById(id).orElse(null);
+//
+//        if(updatedWorker != null) {
+//            return repo.save(worker);
+//        } else {
+//            return null;
+//        }
+//    }
 
     public void deleteWorker(int id) {
         repo.deleteById(id);
     }
 
     public Worker addWorker(Worker worker, MultipartFile imageFile) throws IOException {
+        worker.setImageName(imageFile.getOriginalFilename());
+        worker.setImageType(imageFile.getContentType());
+        worker.setImageData(imageFile.getBytes());
+        return repo.save(worker);
+    }
+
+    public Worker updateWorker(int workerId, Worker worker, MultipartFile imageFile) throws IOException {
         worker.setImageName(imageFile.getOriginalFilename());
         worker.setImageType(imageFile.getContentType());
         worker.setImageData(imageFile.getBytes());

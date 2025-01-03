@@ -3,6 +3,7 @@ package com.hastycode.RecapCRUD.controller;
 import com.hastycode.RecapCRUD.model.Worker;
 import com.hastycode.RecapCRUD.service.WorkerService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -56,17 +57,46 @@ public class WorkerController {
         }
     }
 
-    @PutMapping("/workers/{id}")
-    public ResponseEntity<Worker> updateWorker(@PathVariable int id, @RequestBody Worker worker) {
-        Worker newWorker = null;
-        newWorker = service.updateWorker(worker, id);
+    @GetMapping("/worker/{workerId}/image")
+    public ResponseEntity<byte[]> getImageByProductId(@PathVariable int workerId) {
+        Worker worker = service.getWorkerById(workerId);
+        byte[] imageFile = worker.getImageData();
 
-        if(newWorker != null) {
-            return  new ResponseEntity<>(newWorker, HttpStatus.OK);
+        return ResponseEntity.ok()
+                .contentType(MediaType.valueOf(worker.getImageType()))
+                .body(imageFile);
+    }
+
+//    @PutMapping("/workers/{id}")
+//    public ResponseEntity<Worker> updateWorker(@PathVariable int id, @RequestBody Worker worker) {
+//        Worker newWorker = null;
+//        newWorker = service.updateWorker(worker, id);
+//
+//        if(newWorker != null) {
+//            return  new ResponseEntity<>(newWorker, HttpStatus.OK);
+//        } else {
+//            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+//        }
+//    }
+
+    @PutMapping("/worker/{workerId}")
+    public ResponseEntity<String> updateWorker(@PathVariable int workerId, @RequestPart Worker worker, @RequestPart MultipartFile imageFile) {
+        Worker worker1 = null;
+
+        try{
+            worker1 = service.updateWorker(workerId, worker, imageFile);
+        } catch (Exception e) {
+            return  new ResponseEntity<>("Worker not Updated", HttpStatus.BAD_REQUEST);
+        }
+
+        if(worker1 != null) {
+            return new ResponseEntity<>("Updated Successfully", HttpStatus.OK);
         } else {
-            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Failed to Update", HttpStatus.BAD_REQUEST );
         }
     }
+
+
 
     @DeleteMapping("/workers/{id}")
     public ResponseEntity<String> deleteWorker(@PathVariable int id) {
