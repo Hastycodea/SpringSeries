@@ -5,6 +5,7 @@ import com.hastycode.RecapCRUD.service.WorkerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -37,12 +38,22 @@ public class WorkerController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+//    @PostMapping("/workers")
+//    public ResponseEntity<Worker> addWorker(@RequestBody Worker worker) {
+//        if(worker != null) {
+//            return new ResponseEntity<>(service.addWorker(worker), HttpStatus.OK);
+//        }
+//        return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+//    }
+
     @PostMapping("/workers")
-    public ResponseEntity<Worker> addWorker(@RequestBody Worker worker) {
-        if(worker != null) {
-            return new ResponseEntity<>(service.addWorker(worker), HttpStatus.OK);
+    public ResponseEntity<?> addWorker(@RequestPart Worker worker, @RequestPart MultipartFile imageFile) {
+        try {
+            Worker worker1 = service.addWorker(worker, imageFile);
+            return new ResponseEntity<>(worker1, HttpStatus.CREATED);
+        } catch (Exception e) {
+           return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
     }
 
     @PutMapping("/workers/{id}")

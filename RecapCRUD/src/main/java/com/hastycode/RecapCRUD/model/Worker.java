@@ -18,5 +18,9 @@ public class Worker {
     public String firstName;
     public String lastName;
 
+    public String imageName;
+    public String imageType;
+    @Lob
+    public byte[] imageData;
 
 }
