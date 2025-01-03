@@ -96,8 +96,6 @@ public class WorkerController {
         }
     }
 
-
-
     @DeleteMapping("/workers/{id}")
     public ResponseEntity<String> deleteWorker(@PathVariable int id) {
         Worker worker = service.getWorkerById(id);
