@@ -86,10 +86,7 @@ public class WorkerController {
         try{
             worker1 = service.updateWorker(workerId, worker, imageFile);
         } catch (Exception e) {
-            return  new ResponseEntity<>("Worker not Updated", HttpStatus.BAD_REQUEST);
-        }
-
-        if(worker1 != null) {
+            return  new ResponseEntity<>("Worker not Updated", HttpStatus.BAD_REQUEST); } if(worker1 != null) {
             return new ResponseEntity<>("Updated Successfully", HttpStatus.OK);
         } else {
             return new ResponseEntity<>("Failed to Update", HttpStatus.BAD_REQUEST );
