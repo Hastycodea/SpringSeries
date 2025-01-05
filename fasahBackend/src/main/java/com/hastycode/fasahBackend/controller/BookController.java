@@ -54,7 +54,7 @@ public class BookController {
     public ResponseEntity<?> addBook(@RequestPart Book book, @RequestPart MultipartFile imageFile) {
         try{
             Book book1 = service.addBook(book, imageFile);
-            return new ResponseEntity<>(book, HttpStatus.CREATED);
+            return new ResponseEntity<>(book1, HttpStatus.CREATED);
         } catch (Exception e){
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
