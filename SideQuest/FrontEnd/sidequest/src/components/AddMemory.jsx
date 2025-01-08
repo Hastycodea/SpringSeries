@@ -13,7 +13,8 @@ const AddMemory = () => {
 
   //handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
+
     const formData = new FormData();
     formData.append("imageFile", image);
     formData.append(
