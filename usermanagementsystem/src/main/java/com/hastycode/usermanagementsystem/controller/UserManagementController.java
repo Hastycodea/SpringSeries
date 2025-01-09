@@ -53,4 +53,9 @@ public class UserManagementController {
         return ResponseEntity.status(res.getStatusCode()).body(res);
     }
 
+    @DeleteMapping("/admin/delete/{userId}")
+    public ResponseEntity<ReqRes> deleteUser(@PathVariable long userId){
+        return ResponseEntity.ok(userManagementService.deleteUser(userId));
+    }
+
 }
