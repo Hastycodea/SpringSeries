@@ -10,6 +10,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserManagementService {
@@ -76,14 +78,14 @@ public class UserManagementService {
         try{
             String ourEmail = jwtUtils.extractUsername(refreshTokenRequest.getToken());
             OurUsers user = usersRepo.findByEmail(ourEmail).orElseThrow();
-           if(jwtUtils.isTokenValid(refreshTokenRequest.getToken(), user)) {
-               var jwt = jwtUtils.generateToken(user);
-               response.setStatusCode(200);
-               response.setToken(jwt);
-               response.setExpirationTime("24Hrs");
-               response.setRefreshToken(refreshTokenRequest.getToken());
-               response.setMessage("Successfully refreshed token");
-           }
+            if(jwtUtils.isTokenValid(refreshTokenRequest.getToken(), user)) {
+                var jwt = jwtUtils.generateToken(user);
+                response.setStatusCode(200);
+                response.setToken(jwt);
+                response.setExpirationTime("24Hrs");
+                response.setRefreshToken(refreshTokenRequest.getToken());
+                response.setMessage("Successfully refreshed token");
+            }
 
         } catch (Exception e) {
             response.setStatusCode(500);
@@ -92,6 +94,114 @@ public class UserManagementService {
 
         return response;
 
+    }
+
+    public ReqRes getAllUsers() {
+        ReqRes res = new ReqRes();
+
+        try{
+            List<OurUsers> result = usersRepo.findAll();
+
+            if(!result.isEmpty()){
+                res.setOurUsersList(result);
+                res.setStatusCode(200);
+                res.setMessage("successful");
+            } else {
+                res.setStatusCode(404);
+                res.setMessage("No users found!");
+            }
+
+        } catch (Exception e) {
+            res.setStatusCode(500);
+            res.setError(e.getMessage());
+        }
+        return res;
+    }
+
+    public ReqRes getUserById(long id) {
+        ReqRes res = new ReqRes();
+        try{
+            OurUsers userById = usersRepo.findById(id).orElseThrow(() -> new RuntimeException("No user found"));
+            res.setOurUsers(userById);
+            res.setStatusCode(200);
+            res.setMessage("User with id '" + id + "' found successfully");
+
+        } catch (Exception e) {
+            res.setStatusCode(500);
+            res.setError(e.getMessage());
+        }
+        return  res;
+    }
+
+    public ReqRes deleteUser(long id) {
+        ReqRes res = new ReqRes();
+        try{
+            Optional<OurUsers> optionalOurUser = usersRepo.findById(id);
+            if (optionalOurUser.isPresent()) {
+                usersRepo.deleteById(id);
+                res.setStatusCode(200);
+                res.setMessage("User of id '" + id + "' deleted successfully");
+            } else {
+                res.setStatusCode(4040);
+                res.setMessage("User not found");
+            }
+        } catch (Exception e) {
+            res.setStatusCode(500);
+            res.setError(e.getMessage());
+        }
+        return res;
+    }
+
+    public ReqRes updateUser(long id, OurUsers updatedUser){
+        ReqRes res = new ReqRes();
+
+        try{
+            Optional<OurUsers> usersOptional = usersRepo.findById(id);
+
+            if(usersOptional.isPresent()) {
+                OurUsers existingUser = usersOptional.get();
+                existingUser.setEmail(updatedUser.getEmail());
+                existingUser.setName(updatedUser.getName());
+                existingUser.setCity(updatedUser.getCity());
+                existingUser.setRole(updatedUser.getRole());
+
+                if(!updatedUser.getPassword().isEmpty() && updatedUser.getPassword() != null) {
+                    existingUser.setPassword(passwordEncoder.encode(updatedUser.getPassword()));
+                }
+                OurUsers savedUser = usersRepo.save(existingUser);
+                res.setStatusCode(200);
+                res.setMessage("User updated successfully");
+            } else {
+               res.setStatusCode(404);
+               res.setMessage("User not found for update");
+            }
+
+        } catch (Exception e) {
+            res.setStatusCode(500);
+            res.setError(e.getMessage());
+        }
+        return res;
+    }
+
+    public ReqRes getMyInfo(String email) {
+        ReqRes res = new ReqRes();
+
+        try{
+            Optional<OurUsers> usersOptional = usersRepo.findByEmail(email);
+            if(usersOptional.isPresent()) {
+                res.setOurUsers(usersOptional.get());
+                res.setStatusCode(200);
+                res.setMessage("successful");
+            } else {
+                res.setStatusCode(404);
+                res.setMessage("Unsuccessful: user not found!");
+            }
+
+        } catch (Exception e) {
+            res.setStatusCode(500);
+            res.setError(e.getMessage());
+        }
+        return  res;
     }
 
 }
