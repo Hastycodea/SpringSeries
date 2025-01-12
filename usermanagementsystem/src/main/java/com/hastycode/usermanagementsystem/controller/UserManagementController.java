@@ -15,6 +15,11 @@ public class UserManagementController {
     @Autowired
     private UserManagementService userManagementService;
 
+    @GetMapping("/auth/home")
+    public String home() {
+        return "Welcome home!";
+    }
+
     @PostMapping("/auth/register")
     public ResponseEntity<ReqRes> register(@RequestBody ReqRes res) {
         return ResponseEntity.ok(userManagementService.register(res));

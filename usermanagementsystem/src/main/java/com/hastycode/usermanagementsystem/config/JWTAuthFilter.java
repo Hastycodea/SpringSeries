@@ -32,7 +32,7 @@ public class JWTAuthFilter extends OncePerRequestFilter {
         final String jwtToken;
         final String userEmail;
 
-        if(authHeader.isBlank() || authHeader == null) {
+        if(authHeader == null || authHeader.isBlank()) {
             filterChain.doFilter(request, response);
             return;
         }
