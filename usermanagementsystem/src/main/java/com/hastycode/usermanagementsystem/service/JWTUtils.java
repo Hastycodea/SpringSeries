@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.function.Function;
 
-@Service // @Component still applicable
+@Component  // @Component still applicable
 public class JWTUtils {
 
     private SecretKey Key;

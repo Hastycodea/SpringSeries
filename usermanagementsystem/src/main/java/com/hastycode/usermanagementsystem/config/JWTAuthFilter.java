@@ -46,7 +46,7 @@ public class JWTAuthFilter extends OncePerRequestFilter {
 //        if(authHeader == null || !authHeader.startsWith("Bearer ")) {
 //            filterChain.doFilter(request, response);
 //            return;
-//        }
+//        } pending
 
         jwtToken = authHeader.substring(7);
         userEmail = jwtUtils.extractUsername(jwtToken);
