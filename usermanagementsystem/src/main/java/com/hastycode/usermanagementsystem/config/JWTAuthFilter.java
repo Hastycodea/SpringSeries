@@ -32,21 +32,16 @@ public class JWTAuthFilter extends OncePerRequestFilter {
         final String jwtToken;
         final String userEmail;
 
-        String requestPath = request.getRequestURI();
-        if(requestPath.startsWith("/auth/") || requestPath.startsWith("/public/")) {
-            filterChain.doFilter(request, response);
-            return;
-        }
+//        String requestPath = request.getRequestURI();
+//        if(requestPath.startsWith("/auth/") || requestPath.startsWith("/public/")) {
+//            filterChain.doFilter(request, response);
+//            return;
+//        }
 
         if(authHeader == null || authHeader.isBlank()) {
             filterChain.doFilter(request, response);
             return;
         }
-
-//        if(authHeader == null || !authHeader.startsWith("Bearer ")) {
-//            filterChain.doFilter(request, response);
-//            return;
-//        } pending
 
         jwtToken = authHeader.substring(7);
         userEmail = jwtUtils.extractUsername(jwtToken);
