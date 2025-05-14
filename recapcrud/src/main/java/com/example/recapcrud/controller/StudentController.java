@@ -21,10 +21,10 @@ public class StudentController {
 //    public String index() {
 //        return "index.html";
 //    }
-    @GetMapping("/home")
-    public String home() {
-        return "Welcome Home!";
-    }
+//    @GetMapping("/home")
+//    public String home() {
+//        return "Welcome Home!";
+//    }
     @GetMapping("/test")
     public String test() {
         return "Welcome Home!";
