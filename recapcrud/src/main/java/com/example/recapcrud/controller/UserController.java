@@ -5,12 +5,10 @@ import com.example.recapcrud.model.User;
 import com.example.recapcrud.repo.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @AllArgsConstructor
@@ -20,7 +18,10 @@ public class UserController {
     private final UserRepository userRepository;
 
     @GetMapping
-    public List<UserDto> getAllUsers() {
+    public List<UserDto> getAllUsers(@RequestParam (required = false, defaultValue = "", name = "sort") String sort) {
+        if (!Set.of("userName").contains(sort)) {
+            sort = "userName";
+        }
         return userRepository.findAll()
                 .stream()
                 .map(user -> new UserDto(user.getId(), user.getUsername()))
