@@ -1,5 +1,7 @@
 package com.hastycode.RecapCRUD.controller;
 
+import com.hastycode.RecapCRUD.dtos.WorkerDto;
+import com.hastycode.RecapCRUD.mappers.WorkerMapper;
 import com.hastycode.RecapCRUD.model.Worker;
 import com.hastycode.RecapCRUD.service.WorkerService;
 import org.springframework.http.HttpStatus;
@@ -15,9 +17,11 @@ import java.util.List;
 public class WorkerController {
 
     private final WorkerService service;
+    private final WorkerMapper workerMapper;
 
-    public WorkerController(WorkerService service) {
+    public WorkerController(WorkerService service, WorkerMapper workerMapper) {
         this.service = service;
+        this.workerMapper = workerMapper;
     }
 
     @GetMapping("/test")
@@ -25,9 +29,16 @@ public class WorkerController {
         return "Test is running!";
     }
 
+//    @GetMapping("/workers")
+//    public ResponseEntity<List<Worker>> getAllWorkers() {
+//        return new ResponseEntity<>(service.getAllWorkers(), HttpStatus.OK);
+//    }
     @GetMapping("/workers")
-    public ResponseEntity<List<Worker>> getAllWorkers() {
-        return new ResponseEntity<>(service.getAllWorkers(), HttpStatus.OK);
+    public ResponseEntity<List<WorkerDto>> getAllWorkers() {
+        return ResponseEntity.ok(service.getAllWorkers()
+                .stream()
+                .map(workerMapper::toDto)
+                        .toList());
     }
 
     @GetMapping("/workers/{id}")
