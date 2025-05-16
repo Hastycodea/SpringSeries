@@ -2,7 +2,6 @@ package com.example.recapcrud.service;
 
 import com.example.recapcrud.model.Student;
 import com.example.recapcrud.repo.StudentRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
