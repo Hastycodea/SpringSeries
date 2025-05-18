@@ -1,7 +1,11 @@
 package com.hastycode.RecapCRUD.service;
 
+import com.hastycode.RecapCRUD.dtos.WorkerDto;
+import com.hastycode.RecapCRUD.mappers.WorkerMapper;
 import com.hastycode.RecapCRUD.model.Worker;
 import com.hastycode.RecapCRUD.repository.WorkerRepo;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -10,17 +14,17 @@ import java.io.IOException;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class WorkerService {
 
     private final WorkerRepo repo;
+    private final WorkerMapper workerMapper;
 
-    public WorkerService(WorkerRepo repo) {
-        this.repo = repo;
-    }
-
-
-    public List<Worker> getAllWorkers() {
-        return repo.findAll();
+    public List<WorkerDto> getAllWorkers() {
+        return repo.findAll()
+                .stream()
+                .map(workerMapper::toDto)
+                .toList();
     }
 
     public Worker getWorkerById(int id) {

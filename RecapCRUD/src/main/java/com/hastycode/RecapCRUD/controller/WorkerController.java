@@ -4,6 +4,7 @@ import com.hastycode.RecapCRUD.dtos.WorkerDto;
 import com.hastycode.RecapCRUD.mappers.WorkerMapper;
 import com.hastycode.RecapCRUD.model.Worker;
 import com.hastycode.RecapCRUD.service.WorkerService;
+import org.hibernate.jdbc.Work;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,11 +18,11 @@ import java.util.List;
 public class WorkerController {
 
     private final WorkerService service;
-    private final WorkerMapper workerMapper;
+//    private final WorkerMapper workerMapper;
 
     public WorkerController(WorkerService service, WorkerMapper workerMapper) {
         this.service = service;
-        this.workerMapper = workerMapper;
+//        this.workerMapper = workerMapper;
     }
 
     @GetMapping("/test")
@@ -29,26 +30,35 @@ public class WorkerController {
         return "Test is running!";
     }
 
-//    @GetMapping("/workers")
-//    public ResponseEntity<List<Worker>> getAllWorkers() {
-//        return new ResponseEntity<>(service.getAllWorkers(), HttpStatus.OK);
-//    }
     @GetMapping("/workers")
     public ResponseEntity<List<WorkerDto>> getAllWorkers() {
-        return ResponseEntity.ok(service.getAllWorkers()
-                .stream()
-                .map(workerMapper::toDto)
-                        .toList());
+        return ResponseEntity.ok(service.getAllWorkers());
     }
+//    @GetMapping("/workers")
+//    public ResponseEntity<List<WorkerDto>> getAllWorkers() {
+//        return ResponseEntity.ok(service.getAllWorkers()
+//                .stream()
+//                .map(workerMapper::toDto)
+//                        .toList());
+//    }
 
-    @GetMapping("/workers/{id}")
-    public ResponseEntity<Worker> getWorkerById(@PathVariable int id) {
-        Worker worker = service.getWorkerById(id);
-        if(worker != null) {
-            return new ResponseEntity<>(worker, HttpStatus.OK);
-        }
-        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-    }
+//    @GetMapping("/workers/{id}")
+//    public ResponseEntity<Worker> getWorkerById(@PathVariable int id) {
+//        Worker worker = service.getWorkerById(id);
+//        if(worker != null) {
+//            return new ResponseEntity<>(worker, HttpStatus.OK);
+//        }
+//        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+//    }
+
+//    @GetMapping("/workers/{id}")
+//    public ResponseEntity<WorkerDto> getWorkerById(@PathVariable int id) {
+//        Worker worker = service.getWorkerById(id);
+//        if(worker == null) {
+//            return ResponseEntity.notFound().build();
+//        }
+//        return ResponseEntity.ok(workerMapper.toDto(worker));
+//    }
 
 //    @PostMapping("/workers")
 //    public ResponseEntity<Worker> addWorker(@RequestBody Worker worker) {
