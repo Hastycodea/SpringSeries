@@ -35,16 +35,21 @@ public class UserController {
         return userService.getAllUsers();
     }
 
+//    @GetMapping("/{id}")
+//    public ResponseEntity<UserDto> getUserById(@PathVariable int id) {
+//        User user = userRepository.findById(id).orElse(null);
+//
+//        if(user == null) {
+//            return ResponseEntity.notFound().build();
+//        } else {
+//            UserDto userDto = new UserDto(user.getId(), user.getUsername());
+//            return ResponseEntity.ok(userDto);
+//        }
+//    }
+
     @GetMapping("/{id}")
     public ResponseEntity<UserDto> getUserById(@PathVariable int id) {
-        User user = userRepository.findById(id).orElse(null);
-
-        if(user == null) {
-            return ResponseEntity.notFound().build();
-        } else {
-            UserDto userDto = new UserDto(user.getId(), user.getUsername());
-            return ResponseEntity.ok(userDto);
-        }
+       return ResponseEntity.ok(userService.getUserById(id));
     }
 
 }
