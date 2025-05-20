@@ -3,8 +3,6 @@ package com.example.recapcrud.service;
 import com.example.recapcrud.dtos.UserDto;
 import com.example.recapcrud.model.User;
 import com.example.recapcrud.repo.UserRepository;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

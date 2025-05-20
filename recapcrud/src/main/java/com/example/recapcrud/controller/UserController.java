@@ -50,6 +50,12 @@ public class UserController {
 
     @GetMapping("/{id}")
     public ResponseEntity<UserDto> getUserById(@PathVariable int id) {
+        UserDto userDto = userService.getUserById(id);
+
+        if(userDto == null) {
+            return ResponseEntity.notFound().build();
+        }
+
        return ResponseEntity.ok(userService.getUserById(id));
     }
 
