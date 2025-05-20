@@ -1,16 +1,13 @@
 package com.example.recapcrud.controller;
 
 import com.example.recapcrud.dtos.UserDto;
-import com.example.recapcrud.model.User;
 import com.example.recapcrud.repo.UserRepository;
 import com.example.recapcrud.service.UserService;
 import lombok.AllArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
 
 @RestController
 @AllArgsConstructor
