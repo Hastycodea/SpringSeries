@@ -3,6 +3,7 @@ package com.example.recapcrud.controller;
 import com.example.recapcrud.dtos.UserDto;
 import com.example.recapcrud.model.User;
 import com.example.recapcrud.repo.UserRepository;
+import com.example.recapcrud.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,16 +17,22 @@ import java.util.Set;
 public class UserController {
 
     private final UserRepository userRepository;
+    private final UserService userService;
 
-    @GetMapping
-    public List<UserDto> getAllUsers(@RequestParam (required = false, defaultValue = "", name = "sort") String sort) {
-        if (!Set.of("userName").contains(sort)) {
-            sort = "userName";
-        }
-        return userRepository.findAll()
-                .stream()
-                .map(user -> new UserDto(user.getId(), user.getUsername()))
-                .toList();
+//    @GetMapping
+//    public List<UserDto> getAllUsers(@RequestParam (required = false, defaultValue = "", name = "sort") String sort) {
+//        if (!Set.of("userName").contains(sort)) {
+//            sort = "userName";
+//        }
+//        return userRepository.findAll()
+//                .stream()
+//                .map(user -> new UserDto(user.getId(), user.getUsername()))
+//                .toList();
+//    }
+
+    @GetMapping()
+    public List<UserDto> getAllUsers() {
+        return userService.getAllUsers();
     }
 
     @GetMapping("/{id}")

@@ -5,9 +5,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @AllArgsConstructor
-@Data
 public class UserDto {
     @JsonProperty("index_number")
     private int id;
     private String username;
+
+    public int getId() {
+        return id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
 }
