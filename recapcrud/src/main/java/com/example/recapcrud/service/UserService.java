@@ -10,10 +10,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@AllArgsConstructor
-@NoArgsConstructor(force = true)
 public class UserService {
+
     private final UserRepository repo;
+
+    public UserService(UserRepository repo) {
+        this.repo = repo;
+    }
 
     public List<UserDto> getAllUsers() {
        return repo.findAll()
